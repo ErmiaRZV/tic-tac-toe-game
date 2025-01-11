@@ -1,0 +1,14 @@
+.goup{
+    transform: translateY(-1400px);
+}
+.dice{
+    transform: rotate3d(1,1,1,720deg);
+    transition: 1s;
+}
+.win{
+    background-color: #39FF14;
+    scale: 1.2;
+    color: black;
+}
+
+

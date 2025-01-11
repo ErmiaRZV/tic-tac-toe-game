@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="css/output.css">
+  <link rel="stylesheet" href="css/myCss.css">
+  <link rel="stylesheet" href="fonts/css/fontello.css">
+</head>
+
+<body class="bg-black ">
+  <main class="w-full h-[100vh] xl:container mx-auto relative">
+
+    <!-- startDiv -->
+    <div id="startDiv" class="w-full h-full flex flex-wrap content-center gap-32 p-8 md:p-20 lg:p-36 bg-black relative ">
+
+
+      <div class="w-fit mx-auto justify-center flex">
+        <h1
+          class=" border-[4px] border-[#39FF14] px-4 py-6 text-base text-[#39FF14] w-full flex justify-center md:text-3xl">
+          Welcom to Tic-Tac-Toe game</h1>
+      </div>
+
+      <h2 class="w-full text-[#39FF14] flex justify-center text-lg">choose Mode</h2>
+
+
+      <div id="selectMode"
+        class="w-full justify-center *:justify-center *:items-center *:text-black *:text-sm *:flex  flex *:border-[4px] *:border-[#39FF14] gap-6 *:w-[45%] *:md:w-[30%]  *:lg:w-[25%] *:mx-auto *:h-16 *:md:text-xl *:cursor-pointer *:bg-[#39FF14]">
+        <div class="hover:text-[#39FF14] hover:bg-black duration-[.4s]">Player vs Player</div>
+        <div class="hover:text-[#39FF14] hover:bg-black duration-[.4s]">Player vs Bot</div>
+      </div>
+
+      <section  class="absolute h-16 w-full left-0 bottom-0 flex border-t border-[#39FF14]">
+        <h1 class="w-1/2 h-full flex justify-center items-center text-[#39FF14] md:text-xl ">
+            Ermia Razavi
+        </h1>
+        <nav class="h-full w-1/2">
+            <ul class="w-full h-full flex flex-wrap justify-center items-center gap-5">
+                <li><a target="_blank" href="https://www.linkedin.com/in/ermia-razavi-a611312a3/"><i class="icon-linkedin text-[#39FF14]"></i></a></li>
+                <li><a target="_blank" href="https://github.com/ErmiaRZV"><i class="icon-github-circled text-[#39FF14]"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/ermia_razavi.dev/"><i class="icon-instagram text-[#39FF14]"></i></a></li>
+            </ul>
+        </nav>
+      </section>
+    </div>
+
+    <!-- PVP  -->
+    <div id="PVP"
+      class=" w-full h-full flex flex-wrap content-center gap-32 p-8 md:p-20 lg:p-36 bg-black absolute top-0 left-0 goup">
+
+
+      <span id="backPVP"
+        class="absolute top-[40px] left-[40px] border border-[#39FF14]  text-black bg-[#39FF14]  justify-center text-lg hover:text-[#39FF14] hover:bg-black duration-[.4s] cursor-pointer p-1">Back</span>
+
+
+      <h1
+        class=" border-[4px] border-[#39FF14] px-2 py-6 text-base text-[#39FF14] w-full md:w-[90%] lg:w-[70%] xl:w-[50%] mx-auto flex justify-center md:text-3xl">
+        Player vs Player</h1>
+
+
+      <div class="w-full flex flex-wrap">
+        <h2 class="w-full text-[#39FF14] flex justify-center text-lg">click to specify who should start</h2>
+
+        <div id="dice" class="w-14 h-14 mx-auto bg-[#39FF14] mt-5 flex justify-center items-center cursor-pointer">click
+        </div>
+
+        <p class="w-full text-[#39FF14] flex justify-center text-lg mt-5 "></p>
+
+        <div class="w-full flex justify-center mt-16 ">
+
+
+          <h3 id="startGamePVP"
+            class=" text-black bg-[#39FF14]  justify-center text-lg hover:text-[#39FF14] hover:bg-black duration-[.4s] cursor-pointer border border-[#39FF14] hidden p-3">
+
+          </h3>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- start PVP  -->
+    <div id="gamePVP"
+      class=" w-full h-full flex flex-wrap content-center gap-32 p-8 md:p-20 lg:p-36 bg-black absolute top-0 left-0 goup">
+
+      <span id="backGamePVP"
+      class="absolute top-[40px] left-[40px] border border-[#39FF14]  text-black bg-[#39FF14]  justify-center text-lg hover:text-[#39FF14] hover:bg-black duration-[.4s] cursor-pointer p-1">End game / Home</span>
+
+
+      <h2 class="w-full text-[#39FF14]  justify-center text-lg hidden"></h2>
+
+      <div id="boxPVP"
+        class="w-full flex-wrap gap-3 *:w-[30%] flex justify-between *:border *:h-20 *:md:h-32  md:gap-7  *:lg:h-32 *:lg:w-[26%]  *:xl:w-[24%] xl:px-36 *:border-[#39FF14] *:flex *:justify-center *:items-center  *:text-[#39FF14]">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- PVB  -->
+
+
+
+    <div id="PVB"
+      class="w-full h-full flex flex-wrap content-center gap-32 p-8 md:p-20 lg:p-36 bg-black absolute top-0 left-0 goup">
+
+      <span id="backPVB"
+        class="absolute top-[40px] left-[40px] border border-[#39FF14]  text-black bg-[#39FF14]  justify-center text-lg hover:text-[#39FF14] hover:bg-black duration-[.4s] cursor-pointer p-1">Back</span>
+
+
+      <h1
+        class=" border-[4px] border-[#39FF14] px-2 py-6 text-base text-[#39FF14] w-full md:w-[90%] lg:w-[70%] xl:w-[50%] mx-auto flex justify-center md:text-3xl">
+        Player vs Bot</h1>
+
+      <h2 class="w-full text-[#39FF14] flex justify-center text-sm md:text-base lg:text-2xl">choose which one do you
+        want to be</h2>
+
+      <div id="selectXO"
+        class="w-full justify-center *:justify-center *:items-center *:text-black *:text-sm *:flex  flex *:border-[4px] *:border-[#39FF14] gap-6 *:w-[45%] *:md:w-[30%]  *:lg:w-[25%] *:mx-auto *:h-16 *:md:text-xl *:cursor-pointer *:bg-[#39FF14]">
+        <div class="hover:text-[#39FF14] hover:bg-black duration-[.4s]">X</div>
+        <div class="hover:text-[#39FF14] hover:bg-black duration-[.4s]">O</div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <div id="dicePVB"
+      class="w-full h-full flex flex-wrap content-center gap-8 p-8 md:p-20 lg:p-36 bg-black absolute top-0 left-0 goup">
+
+      <span id="backDicePVB"
+        class="absolute top-[40px] left-[40px] border border-[#39FF14]  text-black bg-[#39FF14]  justify-center text-lg hover:text-[#39FF14] hover:bg-black duration-[.4s] cursor-pointer p-1">Back</span>
+
+      <h1
+        class=" border-[4px] border-[#39FF14] px-2 py-6 text-base text-[#39FF14] w-full md:w-[90%] lg:w-[70%] xl:w-[50%] mx-auto flex justify-center md:text-3xl">
+        Player vs Bot</h1>
+
+      <h2 class="w-full text-[#39FF14] flex justify-center text-lg">click to specify who should start</h2>
+
+      <div id="diceBot" class="w-14 h-14 mx-auto bg-[#39FF14] mt-5 flex justify-center items-center cursor-pointer">
+        click</div>
+
+      <p class="w-full text-[#39FF14] flex justify-center text-lg mt-5 "></p>
+
+      <div class="w-full flex justify-center mt-16 ">
+
+
+        <h3 id="startGamePVB"
+          class=" text-black bg-[#39FF14]  justify-center text-lg hover:text-[#39FF14] hover:bg-black duration-[.4s] cursor-pointer border border-[#39FF14] hidden p-3">
+
+        </h3>
+      </div>
+    </div>
+
+
+    <!-- start PVB  -->
+
+    <div id="gamePVB" class="w-full h-full flex flex-wrap content-center gap-8 p-8 md:p-20 lg:p-36 bg-black absolute top-0 left-0 goup">
+
+      <span id="backGamePVB"
+      class="absolute top-[40px] left-[40px] border border-[#39FF14]  text-black bg-[#39FF14]  justify-center text-lg hover:text-[#39FF14] hover:bg-black duration-[.4s] cursor-pointer p-1">End game / Home</span>
+
+
+      <h2 class="w-full text-[#39FF14]  justify-center text-lg flex"></h2>
+
+      <div id="boxPVB"
+        class="w-full flex-wrap gap-3 *:w-[30%] flex justify-between *:border *:h-20 *:md:h-32  md:gap-7  *:lg:h-32 *:lg:w-[26%]  *:xl:w-[24%] xl:px-36 *:border-[#39FF14] *:flex *:justify-center *:items-center  *:text-[#39FF14]">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
